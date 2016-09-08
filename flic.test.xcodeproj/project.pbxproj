@@ -14,6 +14,8 @@
 		17EF7C6D1D7B1CD4004620CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17EF7C6B1D7B1CD4004620CD /* LaunchScreen.storyboard */; };
 		17EF7C781D7B1CD5004620CD /* flic_testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EF7C771D7B1CD5004620CD /* flic_testTests.swift */; };
 		17EF7C831D7B1CD5004620CD /* flic_testUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EF7C821D7B1CD5004620CD /* flic_testUITests.swift */; };
+		17EF7C931D7B209D004620CD /* HomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17EF7C921D7B209D004620CD /* HomeKit.framework */; };
+		17EF7C951D7B3028004620CD /* BatteryStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EF7C941D7B3028004620CD /* BatteryStatus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,11 @@
 		17EF7C7E1D7B1CD5004620CD /* flic.testUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = flic.testUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17EF7C821D7B1CD5004620CD /* flic_testUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flic_testUITests.swift; sourceTree = "<group>"; };
 		17EF7C841D7B1CD5004620CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17EF7C901D7B209D004620CD /* flic.test.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = flic.test.entitlements; sourceTree = "<group>"; };
+		17EF7C921D7B209D004620CD /* HomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HomeKit.framework; path = System/Library/Frameworks/HomeKit.framework; sourceTree = SDKROOT; };
+		17EF7C941D7B3028004620CD /* BatteryStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BatteryStatus.swift; sourceTree = "<group>"; };
+		17EF7C961D7B5ADE004620CD /* fa-IR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fa-IR"; path = "fa-IR.lproj/Main.strings"; sourceTree = "<group>"; };
+		17EF7C971D7B5ADE004620CD /* fa-IR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fa-IR"; path = "fa-IR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17EF7C931D7B209D004620CD /* HomeKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +89,7 @@
 				17EF7C761D7B1CD5004620CD /* flic.testTests */,
 				17EF7C811D7B1CD5004620CD /* flic.testUITests */,
 				17EF7C601D7B1CD4004620CD /* Products */,
+				17EF7C911D7B209D004620CD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,8 +106,10 @@
 		17EF7C611D7B1CD4004620CD /* flic.test */ = {
 			isa = PBXGroup;
 			children = (
+				17EF7C901D7B209D004620CD /* flic.test.entitlements */,
 				17EF7C621D7B1CD4004620CD /* AppDelegate.swift */,
 				17EF7C641D7B1CD4004620CD /* ViewController.swift */,
+				17EF7C941D7B3028004620CD /* BatteryStatus.swift */,
 				17EF7C661D7B1CD4004620CD /* Main.storyboard */,
 				17EF7C691D7B1CD4004620CD /* Assets.xcassets */,
 				17EF7C6B1D7B1CD4004620CD /* LaunchScreen.storyboard */,
@@ -123,6 +134,14 @@
 				17EF7C841D7B1CD5004620CD /* Info.plist */,
 			);
 			path = flic.testUITests;
+			sourceTree = "<group>";
+		};
+		17EF7C911D7B209D004620CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				17EF7C921D7B209D004620CD /* HomeKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,7 +212,16 @@
 				TargetAttributes = {
 					17EF7C5E1D7B1CD4004620CD = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 85826LGZGV;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.HomeKit = {
+								enabled = 1;
+							};
+						};
 					};
 					17EF7C721D7B1CD5004620CD = {
 						CreatedOnToolsVersion = 8.0;
@@ -261,6 +289,7 @@
 			files = (
 				17EF7C651D7B1CD4004620CD /* ViewController.swift in Sources */,
 				17EF7C631D7B1CD4004620CD /* AppDelegate.swift in Sources */,
+				17EF7C951D7B3028004620CD /* BatteryStatus.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +329,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				17EF7C671D7B1CD4004620CD /* Base */,
+				17EF7C961D7B5ADE004620CD /* fa-IR */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -308,6 +338,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				17EF7C6C1D7B1CD4004620CD /* Base */,
+				17EF7C971D7B5ADE004620CD /* fa-IR */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -319,6 +350,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -355,7 +387,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -369,6 +401,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -399,7 +432,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -412,6 +445,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = flic.test/flic.test.entitlements;
+				DEVELOPMENT_TEAM = 85826LGZGV;
 				INFOPLIST_FILE = flic.test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "hm.flic-test";
@@ -424,6 +459,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = flic.test/flic.test.entitlements;
+				DEVELOPMENT_TEAM = 85826LGZGV;
 				INFOPLIST_FILE = flic.test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "hm.flic-test";
